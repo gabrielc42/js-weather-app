@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
+
 <body>
-  <div className = "card">
-    <div className = "search">
-      <input type = "text" className = "search-bar">
-      <button>Search</button>
+  <div className="card">
+    <div className="search">
+      <input type="text" className="search-bar" placeholder="Search">
+      <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+          width="1.5em"></svg></button>
     </div>
-    <div className = "weather">
-      <h2 className = "city"> Weather in Minneapolis </h2>
-      <div className = "temp"> 20 </div>
+    <div className="weather-loading">
+      <h2 className="city"> Weather in Minneapolis </h2>
+      <div className="temp"> 20 </div>
+      <div className="flex">
+        <img src="" alt="" className="icon" />
+        <div class="description">Snow</div>
+      </div>
+      <div className="humidity"> Humidity: 89% </div>
+      <div className="visibility"> Visibility: 719 yd </div>
     </div>
   </div>
-  
+
 </body>
+
 </html>
