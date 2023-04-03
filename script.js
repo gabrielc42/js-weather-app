@@ -15,9 +15,6 @@ let weather = {
       .then((data) => this.displayWeather(data));
   },
 
-
-
-
   displayWeather: function (data) {
     const { name } = data;
     const { icon, description } = data.weather[0];
@@ -26,7 +23,7 @@ let weather = {
 
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-    document.querySelector("description").innerText = description;
+    document.querySelector(".description").innerText = description;
     document.querySelector(".temp").innerText = temp + "°F";
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     document.querySelector(".visibility").innerText = "Visibility: " + visibility + " yd"
@@ -36,7 +33,6 @@ let weather = {
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
   },
-
 };
 
 document.querySelector(".search button").addEventListener("click", function () {
